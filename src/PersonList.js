@@ -26,7 +26,7 @@ function PersonList(props) {
     const [score, setScore] = useState(0);
     const handleOpen = () => {
         console.log('person', props.id);
-        fetch(`/search/${props.id}`).then(res => res.json().then(data => {
+        fetch(`https://any-good-backend.herokuapp.com/search/${props.id}`).then(res => res.json().then(data => {
             console.log('data', data);
             setScore(data)
         }));

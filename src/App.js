@@ -16,7 +16,7 @@ function App() {
       body: JSON.stringify({ name: currentSearch })
   };
     Promise.all([
-    fetch('/person', requestOptions).then(res => res.json().then(data => {
+    fetch('https://any-good-backend.herokuapp.com/person', requestOptions).then(res => res.json().then(data => {
       // console.log('data', data.results[0]);
       if(currentSearch.length > 0) {
         console.log('type', Array.isArray(data.results));
