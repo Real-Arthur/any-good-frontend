@@ -45,7 +45,7 @@ function App() {
         setSearch={setSearch}
         clear={clear}
         /> </Jumbotron>
-        <ul>
+        <ul style={{paddingLeft: '0px'}}>
           {list.map(item => {
             if(item.profile_path !== null) {
               return(
